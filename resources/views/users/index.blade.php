@@ -53,11 +53,11 @@
 
                                             <x-avatar 
                                             photopath="{{ $user->profile_photo_path }}" 
-                                            userid="{{ $user->id }}"
-                                            username="{{ $user->name }}"
+                                            id="{{ $user->id }}"
+                                            title="{{ $user->name }}"
                                             w="w-8"
                                             h="h-8"
-                                            routeName="#"
+                                            route="#"
                                             > 
                                             </x-avatar>
 
