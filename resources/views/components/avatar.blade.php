@@ -1,25 +1,25 @@
-@props(['photopath','userid','username','w','h','routeName'])
+@props(['photopath','id','title','w','h','route'])
 
 @if ($photopath != null)
-@if ($routeName != '#')
-<a href="{{ route($routeName, ['id' => $userid]) }}">
+@if ($route != '#')
+<a href="{{ route($route, ['id' => $id]) }}">
     @endif
     <img class="{{ $w }} {{ $h }} mx-auto rounded-full"
         src="{{ Str::startsWith($photopath, 'http') ? $photopath : asset('storage/'.$photopath) }}"
-        alt="{{ $username }}" title="{{ $username }}">
+        alt="{{ $title }}" title="{{ $title }}">
     </img>
-    @if ($routeName != '#')
+    @if ($route != '#')
 </a>
 @endif
 @else
-@if ($routeName != '#')
-<a href="{{ route($routeName, ['id' => $userid]) }}">
+@if ($route != '#')
+<a href="{{ route($route, ['id' => $id]) }}">
     @endif
     <img src="/storage/profile-photos/emptyUser.jpg"
         class="{{ $w }} {{ $h }} bg-gray-300 rounded-full  shrink-0 mx-auto"
-        title="{{ $username }}" alt="{{ $username }}">
+        title="{{ $title }}" alt="{{ $title }}">
     </img>
-    @if ($routeName != '#')
+    @if ($route != '#')
 </a>
 @endif
 @endif
