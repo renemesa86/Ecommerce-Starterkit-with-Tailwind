@@ -30,6 +30,10 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => 4,
                 'title' => 'customer_order_access',
             ],
+            [
+                'id'    => 5,
+                'title' => 'tags_access',
+            ],
             
         ];
 
